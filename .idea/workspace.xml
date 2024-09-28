@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7199b7ae-fe0f-4e32-8114-cf912d337137" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dbp/hackathon/Estudiante/EstudianteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dbp/hackathon/Estudiante/EstudianteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dbp/hackathon/Funcion/FuncionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dbp/hackathon/Funcion/FuncionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dbp/hackathon/Ticket/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dbp/hackathon/Ticket/TicketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dbp/hackathon/Estudiante/EstudianteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbp/hackathon/Estudiante/EstudianteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dbp/hackathon/Funcion/FuncionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbp/hackathon/Funcion/FuncionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dbp/hackathon/Ticket/TicketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbp/hackathon/Ticket/TicketController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +18,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="rama_andres" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -24,9 +32,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2miPkD4mMN03SNNDeA9vM8liYqn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,8 +42,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "rama__andres",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.HackathonApplication.executor": "Run",
+    "git-widget-placeholder": "rama__andres__2",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/DBP/hackaton-2",
     "node.js.detected.package.eslint": "true",
@@ -44,6 +58,11 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RunManager">
@@ -54,6 +73,13 @@
       </method>
     </configuration>
     <configuration name="HackathonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="DB_HOST" value="localhost" />
+        <env name="DB_NAME" value="postgres" />
+        <env name="DB_PASSWORD" value="postgres" />
+        <env name="DB_PORT" value="5555" />
+        <env name="DB_USERNAME" value="postgres" />
+      </envs>
       <module name="hackathon" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="dbp.hackathon.HackathonApplication" />
       <method v="2">
