@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>¡Gracias por tu compra!</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333333;
+        }
+        p {
+            font-size: 16px;
+            color: #555555;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        img {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>¡Gracias por tu compra!</h1>
+    <p>¡Hola <span th:text="${nombre}">nombre</span>! Te informamos que tu compra ha sido exitosa. A continuación, te presentamos los detalles de tu compra:</p>
+    <ul>
+        <li><strong>Nombre de la película:</strong> <span th:text="${nombrePelicula}">nombrePelicula</span></li>
+        <li><strong>Fecha de la función:</strong> <span th:text="${fechaFuncion}">fechaFuncion</span></li>
+        <li><strong>Cantidad de entradas:</strong> <span th:text="${cantidadEntradas}">cantidadEntradas</span></li>
+        <li><strong>Precio total:</strong> <span th:text="${precioTotal}">precioTotal</span></li>
+        <li><strong>Código QR:</strong><br>
+            <img th:src="${qrUrl}" alt="Código QR"></li>
+    </ul>
+    <p>¡No olvides llevar tu código QR impreso o en tu dispositivo móvil para poder ingresar a la función! ¡Te esperamos!</p>
+</div>
+</body>
+</html>

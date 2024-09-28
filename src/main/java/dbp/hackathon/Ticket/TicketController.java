@@ -1,6 +1,8 @@
 package dbp.hackathon.Ticket;
 
+import dbp.hackathon.event.EventCreateTicket;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,12 +12,23 @@ public class TicketController {
 
     @Autowired
     private TicketService ticketService;
+    @Autowired
+    private ApplicationEventPublisher eventPublisher;  // Añadir el publisher de eventos
 
     @PostMapping
     public ResponseEntity<Ticket> createTicket(@RequestBody TicketRequest request) {
         Ticket newTicket = ticketService.createTicket(request.getEstudianteId(), request.getFuncionId(), request.getCantidad());
+
+        if (newTicket != null) {
+            System.out.println("Ticket creado con éxito, publicando evento...");
+            eventPublisher.publishEvent(new EventCreateTicket(this, newTicket.getEstudiante().getEmail(), newTicket));
+        } else {
+            System.out.println("Error creando el ticket");
+        }
+
         return ResponseEntity.ok(newTicket);
     }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<Ticket> getTicketById(@PathVariable Long id) {
