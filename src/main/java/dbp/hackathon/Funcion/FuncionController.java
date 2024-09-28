@@ -22,12 +22,6 @@ public class FuncionController {
         return ResponseEntity.ok(funcionService.getFuncionById(id));
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteFuncion(@PathVariable Long id) {
-        funcionService.deleteFuncion(id);
-        return ResponseEntity.ok().build();
-    }
-
     @PutMapping("/{id}")
     public ResponseEntity<Funcion> replaceFuncion(@PathVariable Long id, @RequestBody Funcion funcion) {
         return ResponseEntity.ok(funcionService.replaceFuncion(id, funcion));
@@ -36,6 +30,12 @@ public class FuncionController {
     @PatchMapping("/{id}")
     public ResponseEntity<Funcion> updateFuncion(@PathVariable Long id, @RequestBody Funcion funcion) {
         return ResponseEntity.ok(funcionService.updateFuncion(id, funcion));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteFuncion(@PathVariable Long id) {
+        funcionService.deleteFuncion(id);
+        return ResponseEntity.ok().build();
     }
 
     @GetMapping("/{id}/earnings")
