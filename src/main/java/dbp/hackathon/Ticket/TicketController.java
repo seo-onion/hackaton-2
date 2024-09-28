@@ -11,11 +11,15 @@ public class TicketController {
     @Autowired
     private TicketService ticketService;
 
+
     @PostMapping
     public ResponseEntity<Ticket> createTicket(@RequestBody TicketRequest request) {
         Ticket newTicket = ticketService.createTicket(request.getEstudianteId(), request.getFuncionId(), request.getCantidad());
+
         return ResponseEntity.ok(newTicket);
     }
+
+
 
     @GetMapping("/{id}")
     public ResponseEntity<Ticket> getTicketById(@PathVariable Long id) {
