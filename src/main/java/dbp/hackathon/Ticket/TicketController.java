@@ -26,12 +26,6 @@ public class TicketController {
         return ResponseEntity.ok(ticket);
     }
 
-    @GetMapping("/estudiante/{estudianteId}")
-    public ResponseEntity<Iterable<Ticket>> getTicketsByEstudianteId(@PathVariable Long estudianteId) {
-        Iterable<Ticket> tickets = ticketService.findByEstudianteId(estudianteId);
-        return ResponseEntity.ok(tickets);
-    }
-
     @PatchMapping("/{id}/changeState")
     public ResponseEntity<?> changeTicketState(@PathVariable Long id) {
         try {
@@ -46,6 +40,12 @@ public class TicketController {
     public ResponseEntity<Void> deleteTicket(@PathVariable Long id) {
         ticketService.deleteById(id);
         return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/estudiante/{estudianteId}")
+    public ResponseEntity<Iterable<Ticket>> getTicketsByEstudianteId(@PathVariable Long estudianteId) {
+        Iterable<Ticket> tickets = ticketService.findByEstudianteId(estudianteId);
+        return ResponseEntity.ok(tickets);
     }
 
     @GetMapping

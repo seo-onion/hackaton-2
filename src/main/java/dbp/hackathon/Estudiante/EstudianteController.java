@@ -12,11 +12,6 @@ public class EstudianteController {
     @Autowired
     private EstudianteService estudianteService;
 
-    @GetMapping("/hola")
-    public ResponseEntity<String> hola() {
-        return ResponseEntity.ok("Hola Mundo, dbp esta en la casa");
-    }
-
     @PostMapping
     public ResponseEntity<Estudiante> save(@RequestBody Estudiante estudiante) {
         return ResponseEntity.ok(estudianteService.save(estudiante));
